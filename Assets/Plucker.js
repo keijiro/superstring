@@ -38,6 +38,7 @@ function Start() {
 			}
 			if (Mathf.Abs(p2) > 1.5) {
 				stringBuilder.StartWave();
+				audio.Play();
 				while(Input.GetMouseButton(0)) yield;
 				break;
 			}
