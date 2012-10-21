@@ -148,7 +148,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 15fa019ad8263436cba51e5f7de249f8, type: 2}
+  - {fileID: 2100000, guid: 7dd57b65b56a04af48a667ca50039929, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -261,8 +261,13 @@ MonoBehaviour:
   m_Name: 
   sections: 10
   waveHeight: .5
-  frequency: 10
+  frequency: 30
   decay: 1
+  standardLength: 1
+  degree: 0
+  colors:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: .626865685, g: 1, b: 1, a: 1}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1

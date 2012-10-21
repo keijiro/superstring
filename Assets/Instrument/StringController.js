@@ -4,6 +4,9 @@ var sections = 10;
 var waveHeight = 1.0;
 var frequency = 80.0;
 var decay = 2.0;
+var standardLength = 4.0;
+var degree = 0;
+var colors : Color[];
 
 private var point1 : Transform;
 private var point2 : Transform;
@@ -12,7 +15,17 @@ private var wave = 0.0;
 function Start () {
 	point1 = transform.parent.Find("Point 1");
 	point2 = transform.parent.Find("Point 2");
+
+	var length = (point2.position - point1.position).magnitude;
+	var ratio = length / standardLength;
+
+	frequency /= ratio;
+	degree = Mathf.FloorToInt(ratio);
+
+	Debug.Log(degree);
+
 	ResetString();
+	renderer.material.color = colors[degree % colors.Length];
 }
 
 function ResetString() {
