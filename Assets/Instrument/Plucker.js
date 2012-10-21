@@ -1,11 +1,11 @@
 #pragma strict
 
-private var stringBuilder : StringBuilder;
+private var stringController : StringController;
 private var normal = Vector3.zero;
 private var border = 0.0;
 
 function Start() {
-	stringBuilder = GetComponentInChildren.<StringBuilder>();
+	stringController = GetComponentInChildren.<StringController>();
 
 	var point1 = transform.Find("Point 1").position;
 	var point2 = transform.Find("Point 2").position;
@@ -33,16 +33,16 @@ function Start() {
 		while (true) {
 			var p2 = GetHeightOfTouchPosition();
 			if (!Input.GetMouseButton(0) || (p0_is_plus ^ (p2 < 0.0))) {
-				stringBuilder.ResetMidpoint();
+				stringController.ResetMidpoint();
 				break;
 			}
 			if (Mathf.Abs(p2) > 1.5) {
-				stringBuilder.StartWave();
+				stringController.StartWave();
 				audio.Play();
 				while(Input.GetMouseButton(0)) yield;
 				break;
 			}
-			stringBuilder.SetMidpoint(GetTouchPosition());
+			stringController.SetMidpoint(GetTouchPosition());
 			yield;
 		}
 	}
