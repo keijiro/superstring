@@ -323,7 +323,7 @@ MonoBehaviour:
   m_Name: 
   sections: 10
   waveHeight: .5
-  frequency: 80
+  frequency: 10
   decay: 1
 --- !u!23 &307829947
 Renderer:
@@ -780,7 +780,7 @@ MonoBehaviour:
   m_Name: 
   sections: 10
   waveHeight: .5
-  frequency: 80
+  frequency: 10
   decay: 1
 --- !u!23 &787235446
 Renderer:
@@ -1080,7 +1080,7 @@ MonoBehaviour:
   m_Name: 
   sections: 10
   waveHeight: .5
-  frequency: 80
+  frequency: 10
   decay: 1
 --- !u!1 &1185810583
 GameObject:
@@ -1421,7 +1421,7 @@ MonoBehaviour:
   m_Name: 
   sections: 10
   waveHeight: .5
-  frequency: 80
+  frequency: 10
   decay: 1
 --- !u!23 &1377181398
 Renderer:
@@ -1918,7 +1918,7 @@ MonoBehaviour:
   m_Name: 
   sections: 10
   waveHeight: .5
-  frequency: 80
+  frequency: 10
   decay: 1
 --- !u!23 &1753676000
 Renderer:
@@ -2088,7 +2088,7 @@ MonoBehaviour:
   m_Name: 
   sections: 10
   waveHeight: .5
-  frequency: 80
+  frequency: 10
   decay: 1
 --- !u!23 &1791079946
 Renderer:

@@ -261,7 +261,7 @@ MonoBehaviour:
   m_Name: 
   sections: 10
   waveHeight: .5
-  frequency: 80
+  frequency: 10
   decay: 1
 --- !u!114 &11400002
 MonoBehaviour:

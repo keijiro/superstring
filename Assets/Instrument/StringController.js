@@ -43,13 +43,13 @@ function StartWave() {
 	mesh.SetIndices(indices, MeshTopology.LineStrip, 0);
 	GetComponent.<MeshFilter>().mesh = mesh;
 
-	wave = 1.0;
+	wave = Mathf.Epsilon;
 }
 
 function Update() {
 	if (wave > 0.0) {
-		wave -= Time.deltaTime / decay;
-		if (wave > 0.0) {
+		wave += Time.deltaTime;
+		if (wave < decay) {
 			GetComponent.<MeshFilter>().mesh.vertices = MakeWaveVertices();
 		} else {
 			ResetString();
@@ -59,6 +59,9 @@ function Update() {
 }
 
 private function MakeWaveVertices() {
+	var height = waveHeight * (1.0 - wave / decay);
+	height *= Mathf.Cos(wave * frequency * Mathf.PI * 2.0);
+
 	var vv = (point2.position - point1.position).normalized;
 	vv = Vector3(-vv.y, vv.x);
 
@@ -66,7 +69,7 @@ private function MakeWaveVertices() {
 	for (var i = 0; i < sections; i++) {
 		var x = 1.0 / (sections - 1) * i;
 		vertices[i] = Vector3.Lerp(point1.position, point2.position, x);
-		vertices[i] += vv * (Mathf.Sin(Mathf.PI * x) * wave * waveHeight * Mathf.Cos(wave * frequency));
+		vertices[i] += vv * (Mathf.Sin(Mathf.PI * x) * height);
 	}
 	return vertices;
 }
