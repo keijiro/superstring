@@ -8,15 +8,17 @@ var standardLength = 4.0;
 var degree = 0;
 var colors : Color[];
 
-private var point1 : Transform;
-private var point2 : Transform;
+private var pin1 : Transform;
+private var pin2 : Transform;
 private var wave = 0.0;
 
-function Start () {
-	point1 = transform.parent.Find("Point 1");
-	point2 = transform.parent.Find("Point 2");
+function Awake() {
+	pin1 = transform.parent.Find("Pin 1");
+	pin2 = transform.parent.Find("Pin 2");
+}
 
-	var length = (point2.position - point1.position).magnitude;
+function FixPoints() {
+	var length = (pin2.position - pin1.position).magnitude;
 	var ratio = length / standardLength;
 
 	frequency /= ratio;
@@ -31,19 +33,19 @@ function Start () {
 function ResetString() {
 	var mesh = Mesh();
 	mesh.MarkDynamic();
-	mesh.vertices = [point1.position, point1.position, point2.position];
+	mesh.vertices = [pin1.position, pin1.position, pin2.position];
 	mesh.SetIndices([0, 1, 2], MeshTopology.LineStrip, 0);
 	GetComponent.<MeshFilter>().mesh = mesh;
 }
 
 function SetMidpoint(midpoint : Vector3) {
 	if (wave > 0.0) return;
-	GetComponent.<MeshFilter>().mesh.vertices = [point1.position, midpoint, point2.position];
+	GetComponent.<MeshFilter>().mesh.vertices = [pin1.position, midpoint, pin2.position];
 }
 
 function ResetMidpoint() {
 	if (wave > 0.0) return;
-	GetComponent.<MeshFilter>().mesh.vertices = [point1.position, point1.position, point2.position];
+	GetComponent.<MeshFilter>().mesh.vertices = [pin1.position, pin1.position, pin2.position];
 }
 
 function StartWave() {
@@ -75,13 +77,13 @@ private function MakeWaveVertices() {
 	var height = waveHeight * (1.0 - wave / decay);
 	height *= Mathf.Cos(wave * frequency * Mathf.PI * 2.0);
 
-	var vv = (point2.position - point1.position).normalized;
+	var vv = (pin2.position - pin1.position).normalized;
 	vv = Vector3(-vv.y, vv.x);
 
 	var vertices = new Vector3[sections];
 	for (var i = 0; i < sections; i++) {
 		var x = 1.0 / (sections - 1) * i;
-		vertices[i] = Vector3.Lerp(point1.position, point2.position, x);
+		vertices[i] = Vector3.Lerp(pin1.position, pin2.position, x);
 		vertices[i] += vv * (Mathf.Sin(Mathf.PI * x) * height);
 	}
 	return vertices;

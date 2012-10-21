@@ -86,7 +86,7 @@ GameObject:
   - 135: {fileID: 146050260}
   - 23: {fileID: 146050259}
   m_Layer: 0
-  m_Name: Point 1
+  m_Name: Pin 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -155,7 +155,7 @@ GameObject:
   - 135: {fileID: 176965824}
   - 23: {fileID: 176965823}
   m_Layer: 0
-  m_Name: Point 1
+  m_Name: Pin 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -224,7 +224,7 @@ GameObject:
   - 135: {fileID: 227106738}
   - 23: {fileID: 227106737}
   m_Layer: 0
-  m_Name: Point 2
+  m_Name: Pin 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -406,7 +406,7 @@ GameObject:
   - 135: {fileID: 660831575}
   - 23: {fileID: 660831574}
   m_Layer: 0
-  m_Name: Point 1
+  m_Name: Pin 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -517,6 +517,14 @@ Prefab:
     - target: {fileID: 400004, guid: ecb87be31548643b3988aa9836c0e034, type: 2}
       propertyPath: m_LocalPosition.x
       value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ecb87be31548643b3988aa9836c0e034, type: 2}
+      propertyPath: m_Name
+      value: Pin 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: ecb87be31548643b3988aa9836c0e034, type: 2}
+      propertyPath: m_Name
+      value: Pin 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ecb87be31548643b3988aa9836c0e034, type: 2}
@@ -889,7 +897,7 @@ GameObject:
   - 135: {fileID: 1185810586}
   - 23: {fileID: 1185810585}
   m_Layer: 0
-  m_Name: Point 2
+  m_Name: Pin 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -958,7 +966,7 @@ GameObject:
   - 135: {fileID: 1191966927}
   - 23: {fileID: 1191966926}
   m_Layer: 0
-  m_Name: Point 2
+  m_Name: Pin 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1169,6 +1177,14 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 7504d1401387c46729ff4f16298c09cd, type: 3}
+    - target: {fileID: 100000, guid: ecb87be31548643b3988aa9836c0e034, type: 2}
+      propertyPath: m_Name
+      value: Pin 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: ecb87be31548643b3988aa9836c0e034, type: 2}
+      propertyPath: m_Name
+      value: Pin 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ecb87be31548643b3988aa9836c0e034, type: 2}
   m_RootGameObject: {fileID: 1273259146}
@@ -1233,6 +1249,14 @@ Prefab:
       propertyPath: m_Pitch
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ecb87be31548643b3988aa9836c0e034, type: 2}
+      propertyPath: m_Name
+      value: Pin 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: ecb87be31548643b3988aa9836c0e034, type: 2}
+      propertyPath: m_Name
+      value: Pin 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ecb87be31548643b3988aa9836c0e034, type: 2}
   m_RootGameObject: {fileID: 2068892519}
@@ -1250,7 +1274,7 @@ GameObject:
   - 135: {fileID: 1476833901}
   - 23: {fileID: 1476833900}
   m_Layer: 0
-  m_Name: Point 2
+  m_Name: Pin 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1418,7 +1442,7 @@ GameObject:
   - 135: {fileID: 1533505023}
   - 23: {fileID: 1533505022}
   m_Layer: 0
-  m_Name: Point 2
+  m_Name: Pin 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1530,6 +1554,14 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: -4
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ecb87be31548643b3988aa9836c0e034, type: 2}
+      propertyPath: m_Name
+      value: Pin 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: ecb87be31548643b3988aa9836c0e034, type: 2}
+      propertyPath: m_Name
+      value: Pin 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ecb87be31548643b3988aa9836c0e034, type: 2}
   m_RootGameObject: {fileID: 1511358765}
@@ -1547,7 +1579,7 @@ GameObject:
   - 135: {fileID: 1705093032}
   - 23: {fileID: 1705093031}
   m_Layer: 0
-  m_Name: Point 1
+  m_Name: Pin 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1867,7 +1899,7 @@ GameObject:
   - 135: {fileID: 1859634140}
   - 23: {fileID: 1859634139}
   m_Layer: 0
-  m_Name: Point 1
+  m_Name: Pin 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1978,6 +2010,14 @@ Prefab:
     - target: {fileID: 400004, guid: ecb87be31548643b3988aa9836c0e034, type: 2}
       propertyPath: m_LocalPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ecb87be31548643b3988aa9836c0e034, type: 2}
+      propertyPath: m_Name
+      value: Pin 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: ecb87be31548643b3988aa9836c0e034, type: 2}
+      propertyPath: m_Name
+      value: Pin 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ecb87be31548643b3988aa9836c0e034, type: 2}

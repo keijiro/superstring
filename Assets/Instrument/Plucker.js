@@ -1,18 +1,19 @@
 #pragma strict
 
-private var stringController : StringController;
+private var drawer : StringDrawer;
 private var normal = Vector3.zero;
 private var border = 0.0;
 
 function Start() {
-	stringController = GetComponentInChildren.<StringController>();
+	drawer = GetComponentInChildren.<StringDrawer>();
+	drawer.FixPoints();
 
-	var point1 = transform.Find("Point 1").position;
-	var point2 = transform.Find("Point 2").position;
+	var pin1 = transform.Find("Pin 1").position;
+	var pin2 = transform.Find("Pin 2").position;
 
-	var vline = (point2 - point1).normalized;
+	var vline = (pin2 - pin1).normalized;
 	normal = Vector3(-vline.y, vline.x, 0);
-	border = Vector3.Dot(normal, point1);
+	border = Vector3.Dot(normal, pin1);
 
 	while (true) {
 		while (!Input.GetMouseButton(0)) yield;
@@ -33,16 +34,16 @@ function Start() {
 		while (true) {
 			var p2 = GetHeightOfTouchPosition();
 			if (!Input.GetMouseButton(0) || (p0_is_plus ^ (p2 < 0.0))) {
-				stringController.ResetMidpoint();
+				drawer.ResetMidpoint();
 				break;
 			}
 			if (Mathf.Abs(p2) > 1.5) {
-				stringController.StartWave();
+				drawer.StartWave();
 				audio.Play();
 				while(Input.GetMouseButton(0)) yield;
 				break;
 			}
-			stringController.SetMidpoint(GetTouchPosition());
+			drawer.SetMidpoint(GetTouchPosition());
 			yield;
 		}
 	}
